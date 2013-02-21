@@ -5,4 +5,6 @@ template "#{node[:release_dir]}/config.ru" do
   source "config.ru.erb"
 end
 
-#unicorn_service "gollum"
+runit_service "gollum" do
+  env({ :RELEASE_DIR => node[:release_dir]})
+end
