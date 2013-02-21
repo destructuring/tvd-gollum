@@ -1,0 +1,6 @@
+require 'gollum/frontend/app'
+ 
+Precious::App.set(:gollum_path, "<%= node[:release_dir] %>/<%= node[:gollum][:wiki_dir] %>")
+Precious::App.set(:wiki_options, { })
+ 
+run Precious::App
