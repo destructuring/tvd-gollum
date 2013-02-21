@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    tvd-gollum (0.0.0)
+    tvd-gollum (0.0.1)
       gollum
       tvd-runit
       tvd-unicorn
