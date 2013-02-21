@@ -1,0 +1,102 @@
+PATH
+  remote: .
+  specs:
+    tvd-gollum (0.0.0)
+      gollum
+      tvd-runit
+      tvd-unicorn
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    diff-lcs (1.2.1)
+    erubis (2.7.0)
+    github-markdown (0.5.3)
+    github-markup (0.7.5)
+    gollum (2.4.11)
+      github-markdown (~> 0.5.3)
+      github-markup (>= 0.7.4, < 1.0.0)
+      grit (~> 2.5.0)
+      mustache (>= 0.99.4, < 1.0.0)
+      nokogiri (~> 1.5.5)
+      pygments.rb (~> 0.3.2)
+      sanitize (~> 2.0.3)
+      sinatra (~> 1.3.3)
+      stringex (~> 1.5.1)
+      useragent (~> 0.4.15)
+    grit (2.5.0)
+      diff-lcs (~> 1.1)
+      mime-types (~> 1.15)
+      posix-spawn (~> 0.3.6)
+    highline (1.6.15)
+    ipaddress (0.8.0)
+    json (1.7.7)
+    microwave (11.400.5)
+      erubis
+      highline (>= 1.6.9)
+      json (>= 1.4.4, <= 1.7.7)
+      mixlib-authentication (>= 1.3.0)
+      mixlib-cli (~> 1.3.0)
+      mixlib-config (>= 1.1.2)
+      mixlib-log (>= 1.3.0)
+      mixlib-shellout
+      net-ssh (~> 2.6)
+      net-ssh-multi (~> 1.1.0)
+      ohai (>= 0.6.0)
+      rest-client (>= 1.0.4, < 1.7.0)
+      yajl-ruby (~> 1.1)
+    mime-types (1.21)
+    mixlib-authentication (1.3.0)
+      mixlib-log
+    mixlib-cli (1.3.0)
+    mixlib-config (1.1.2)
+    mixlib-log (1.4.1)
+    mixlib-shellout (1.1.0)
+    mustache (0.99.4)
+    net-ssh (2.6.5)
+    net-ssh-gateway (1.2.0)
+      net-ssh (>= 2.6.5)
+    net-ssh-multi (1.1)
+      net-ssh (>= 2.1.4)
+      net-ssh-gateway (>= 0.99.0)
+    nokogiri (1.5.6)
+    ohai (6.16.0)
+      ipaddress
+      mixlib-cli
+      mixlib-config
+      mixlib-log
+      mixlib-shellout
+      systemu
+      yajl-ruby
+    posix-spawn (0.3.6)
+    pygments.rb (0.3.7)
+      posix-spawn (~> 0.3.6)
+      yajl-ruby (~> 1.1.0)
+    rack (1.5.2)
+    rack-protection (1.3.2)
+      rack
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
+    sanitize (2.0.3)
+      nokogiri (>= 1.4.4, < 1.6)
+    sinatra (1.3.4)
+      rack (~> 1.4)
+      rack-protection (~> 1.3)
+      tilt (~> 1.3, >= 1.3.3)
+    stringex (1.5.1)
+    systemu (2.5.2)
+    tilt (1.3.3)
+    tvd-alpha_omega (0.0.11)
+      microwave
+    tvd-runit (0.0.20)
+      tvd-alpha_omega
+    tvd-unicorn (0.0.14)
+      tvd-alpha_omega
+    useragent (0.4.16)
+    yajl-ruby (1.1.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  tvd-gollum!
