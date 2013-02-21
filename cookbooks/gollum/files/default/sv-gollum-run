@@ -11,7 +11,7 @@ shome="$(cd -P -- "$(dirname -- "$BASH_SOURCE")" && pwd -P)"
 
 # entry point
 function main {
-  exec bundle exec unicorn "$(cat $shome/env/RELEASE_DIR)/config.ru"
+  exec bundle exec unicorn -p "$(cat $shome/env/GOLLUM_PORT)" "$(cat $shome/env/RELEASE_DIR)/config.ru"
 }
 
 # pass arguments to entry point

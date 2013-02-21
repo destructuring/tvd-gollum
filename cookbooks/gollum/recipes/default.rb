@@ -6,5 +6,7 @@ template "#{node[:release_dir]}/config.ru" do
 end
 
 runit_service "gollum" do
-  env({ :RELEASE_DIR => node[:release_dir]})
+  env({ :RELEASE_DIR => node[:release_dir],
+        :GOLLUM_PORT => node[:gollum][:port]
+  })
 end
