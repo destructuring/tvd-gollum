@@ -25,4 +25,5 @@ Gem::Specification.new do |s|
   s.add_dependency "gollum"
   s.add_dependency "tvd-runit"
   s.add_dependency "tvd-unicorn"
+  s.add_dependency "unicorn"
 end
