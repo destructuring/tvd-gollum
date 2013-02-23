@@ -8,7 +8,7 @@ PATH
       unicorn
 
 GEM
-  remote: http://rubygems.org/
+  remote: https://rubygems.org/
   specs:
     diff-lcs (1.2.1)
     erubis (2.7.0)
@@ -93,6 +93,8 @@ GEM
       microwave
     tvd-runit (0.0.20)
       tvd-alpha_omega
+    tvd-tvdinner (0.0.3)
+      microwave
     tvd-unicorn (0.0.14)
       tvd-alpha_omega
     unicorn (4.6.0)
@@ -107,3 +109,4 @@ PLATFORMS
 
 DEPENDENCIES
   tvd-gollum!
+  tvd-tvdinner
