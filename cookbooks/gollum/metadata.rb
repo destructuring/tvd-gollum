@@ -1,2 +1,1 @@
-depends "tvdinner"
-depends "runit"
+depends "unicorn"

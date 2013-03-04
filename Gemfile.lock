@@ -3,13 +3,12 @@ PATH
   specs:
     tvd-gollum (0.0.1)
       gollum
-      tvd-runit
       tvd-unicorn
-      unicorn
 
 GEM
   remote: https://rubygems.org/
   specs:
+    builder (3.2.0)
     chef (11.4.0)
       erubis
       highline (>= 1.6.9)
@@ -24,8 +23,28 @@ GEM
       ohai (>= 0.6.0)
       rest-client (>= 1.0.4, < 1.7.0)
       yajl-ruby (~> 1.1)
-    diff-lcs (1.2.1)
+    chefspec (0.9.0)
+      chef (>= 0.9.12)
+      erubis
+      minitest-chef-handler (~> 0.6.0)
+      rspec (~> 2.11.0)
+    ci_reporter (1.8.4)
+      builder (>= 2.1.2)
+    coderay (1.0.9)
+    diff-lcs (1.1.3)
     erubis (2.7.0)
+    foodcritic (1.7.0)
+      erubis
+      gherkin (~> 2.11.1)
+      gist (~> 3.1.0)
+      nokogiri (~> 1.5.4)
+      pry (~> 0.9.8.4)
+      rak (~> 1.4)
+      treetop (~> 1.4.10)
+      yajl-ruby (~> 1.1.0)
+    gherkin (2.11.6)
+      json (>= 1.7.6)
+    gist (3.1.1)
     github-markdown (0.5.3)
     github-markup (0.7.5)
     gollum (2.4.11)
@@ -46,22 +65,13 @@ GEM
     highline (1.6.15)
     ipaddress (0.8.0)
     json (1.7.7)
-    kgio (2.8.0)
-    microwave (11.400.8)
-      erubis
-      highline (>= 1.6.9)
-      json (>= 1.4.4, <= 1.7.7)
-      mixlib-authentication (>= 1.3.0)
-      mixlib-cli (~> 1.3.0)
-      mixlib-config (>= 1.1.2)
-      mixlib-log (>= 1.3.0)
-      mixlib-shellout
-      net-ssh (~> 2.6)
-      net-ssh-multi (~> 1.1.0)
-      ohai (>= 0.6.0)
-      rest-client (>= 1.0.4, < 1.7.0)
-      yajl-ruby (~> 1.1)
+    method_source (0.7.1)
     mime-types (1.21)
+    minitest (4.6.2)
+    minitest-chef-handler (0.6.8)
+      chef
+      ci_reporter
+      minitest
     mixlib-authentication (1.3.0)
       mixlib-log
     mixlib-cli (1.3.0)
@@ -84,37 +94,48 @@ GEM
       mixlib-shellout
       systemu
       yajl-ruby
+    polyglot (0.3.3)
     posix-spawn (0.3.6)
+    pry (0.9.8.4)
+      coderay (~> 1.0.5)
+      method_source (~> 0.7.1)
+      slop (>= 2.4.4, < 3)
     pygments.rb (0.3.7)
       posix-spawn (~> 0.3.6)
       yajl-ruby (~> 1.1.0)
     rack (1.5.2)
-    rack-protection (1.3.2)
+    rack-protection (1.4.0)
       rack
-    raindrops (0.10.0)
+    rak (1.4)
     rest-client (1.6.7)
       mime-types (>= 1.16)
+    rspec (2.11.0)
+      rspec-core (~> 2.11.0)
+      rspec-expectations (~> 2.11.0)
+      rspec-mocks (~> 2.11.0)
+    rspec-core (2.11.1)
+    rspec-expectations (2.11.3)
+      diff-lcs (~> 1.1.3)
+    rspec-mocks (2.11.3)
     sanitize (2.0.3)
       nokogiri (>= 1.4.4, < 1.6)
-    sinatra (1.3.4)
+    sinatra (1.3.5)
       rack (~> 1.4)
       rack-protection (~> 1.3)
       tilt (~> 1.3, >= 1.3.3)
+    slop (2.4.4)
     stringex (1.5.1)
     systemu (2.5.2)
-    tilt (1.3.3)
-    tvd-alpha_omega (0.0.11)
-      microwave
-    tvd-runit (0.0.20)
-      tvd-alpha_omega
+    tilt (1.3.4)
+    treetop (1.4.12)
+      polyglot
+      polyglot (>= 0.3.1)
+    tvd-runit (0.0.21)
+      tvd-tvdinner
     tvd-tvdinner (0.0.12)
       chef
-    tvd-unicorn (0.0.14)
-      tvd-alpha_omega
-    unicorn (4.6.0)
-      kgio (~> 2.6)
-      rack
-      raindrops (~> 0.7)
+    tvd-unicorn (0.0.15)
+      tvd-runit
     useragent (0.4.16)
     yajl-ruby (1.1.0)
 
@@ -122,5 +143,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  chefspec
+  foodcritic
+  minitest-chef-handler
   tvd-gollum!
   tvd-tvdinner
