@@ -1,4 +1,4 @@
-include_recipe "alpha_omega"
+include_recipe "tvdinner::workarea"
 
 template "#{node[:release_dir]}/config.ru" do
   mode 0644
