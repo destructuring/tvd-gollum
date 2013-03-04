@@ -1,2 +1,2 @@
-depends "alpha_omega"
+depends "tvdinner"
 depends "runit"
