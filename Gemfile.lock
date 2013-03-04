@@ -65,6 +65,7 @@ GEM
     highline (1.6.15)
     ipaddress (0.8.0)
     json (1.7.7)
+    kgio (2.8.0)
     method_source (0.7.1)
     mime-types (1.21)
     minitest (4.6.2)
@@ -106,6 +107,7 @@ GEM
     rack (1.5.2)
     rack-protection (1.4.0)
       rack
+    raindrops (0.10.0)
     rak (1.4)
     rest-client (1.6.7)
       mime-types (>= 1.16)
@@ -134,8 +136,13 @@ GEM
       tvd-tvdinner
     tvd-tvdinner (0.0.12)
       chef
-    tvd-unicorn (0.0.15)
+    tvd-unicorn (0.0.16)
       tvd-runit
+      unicorn
+    unicorn (4.6.2)
+      kgio (~> 2.6)
+      rack
+      raindrops (~> 0.7)
     useragent (0.4.16)
     yajl-ruby (1.1.0)
 
