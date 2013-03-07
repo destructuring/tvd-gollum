@@ -132,11 +132,11 @@ GEM
     treetop (1.4.12)
       polyglot
       polyglot (>= 0.3.1)
-    tvd-runit (0.0.21)
+    tvd-runit (0.0.23)
       tvd-tvdinner
-    tvd-tvdinner (0.0.18)
+    tvd-tvdinner (0.0.19)
       chef
-    tvd-unicorn (0.0.16)
+    tvd-unicorn (0.0.17)
       tvd-runit
       unicorn
     unicorn (4.6.2)
